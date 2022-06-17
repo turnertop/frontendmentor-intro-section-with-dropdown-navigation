@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- i didn't optimize for mobile because didn't learn it yet and mobile users are stupid like cmon who plays fortnite on phone-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css"> <!-- links to CSS styles.css-->
+
+  <!-- code that links to font on google api-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;600;700;900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+<header>
+  <div id="navbar" class="navbar">
+  <nav>
+    <img src="./images/logo.svg" href="#" id="logo" class="logo"> <!-- for logo Snap-->
+<div id="navbar-wo-logo" class="navbar-wo-logo">
+    <div id="dropdown" class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdownContent()">Features
+        <img src="./images/icon-arrow-down.svg">
+      </button>
+        <div class="dropdown-content" id="MyDropdown" >
+          <img src="./images/icon-todo.svg" class="dropdown-content-icons"> <a href="https://www.youtube.com/watch?v=YXBoVn33zQo">Todo List</a>
+          <img src="./images/icon-calendar.svg" class="dropdown-content-icons"><a href="https://www.youtube.com/shorts/LXBjczgAzvI">Calendar</a>
+          <img src="./images/icon-reminders.svg" class="dropdown-content-icons"><a href="https://www.youtube.com/watch?v=uC6VMB-tOB0">Reminders</a>
+          <img src="./images/icon-planning.svg" class="dropdown-content-icons"><a href="https://www.youtube.com/watch?v=XqZsoesa55w">Planning</a>
+        </div>
+    </div>
+    <div id="dropdown" class="dropdown">
+          <button class="dropbtn" onclick="toggleDropdownContent()">Company
+            <img src="./images/icon-arrow-down.svg">
+          </button>
+            <div class="dropdown-content" id="MyDropdown">
+              <a href="https://www.youtube.com/watch?v=xuCn8ux2gbs">History</a>
+              <a href="https://www.youtube.com/watch?v=f2JuxM-snGc">Our Team</a>
+              <a href="https://www.youtube.com/watch?v=wYZux3BMc5k">Blog</a>
+            </div>   
+    </div>
+    <a href="https://www.youtube.com/watch?v=jar1LTxxAeM" class="careers">Careers</a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="about">About</a>
+  </div>
+    <div id="register" class="register">
+      <a href="https://www.youtube.com/watch?v=EBhFHJMVfiI&list=PLpJl5XaLHtLX-pDk4kctGxtF4nq6BIyjg&index=71">Register</a>
+      </div>
+    <div id="login" class="login">
+    <a href="https://www.youtube.com/watch?v=IkOK8tdEsFY&list=PLpJl5XaLHtLX-pDk4kctGxtF4nq6BIyjg&index=90">Login</a>
+    </div>
+  </div>
+  </nav>
+</header>
+<body>
+  <div id="image-hero-desktop-parent" class="image-hero-desktop-parent">
+  <div id="image-hero-desktop" class="image-hero-desktop"> 
+    <img src="./images/image-hero-desktop.png" width="485px" height="645">
+  </div>
+  </div>
+<div id="title-formatting" class="title-formatting">
+<h1 class="title">
+  Make <span class="title-separate">remote work</span>
+</h1>
+</div>
+<div class="p1-formatting">
+  Get your team in sync, no matter your location. <span class="p1-separate"></span>Streamline processes, 
+  create team rituals, and <span class="p1-separate"></span>watch productivity soar.
+</div>
+<div class="learn-more-formatting">
+<button class="learn-more">Learn more</button>
+</div>
+
+<!-- diamond sexy sponsors of the website-->
+<img src="./images/client-databiz.svg" class="databiz">
+<img src="./images/client-audiophile.svg" class="audiophile">
+<img src="./images/client-meet.svg" class="meet">
+<img src="./images/client-maker.svg" class="maker">
+
+
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    <div class="turnerfool">
+    Coded by <a href="https://github.com/turnertop">turnerfool-God-of-Coding</a>.
+    </div>
+  </div>
+</body>
+
+<script>
+  /* when user clicks on button, toggle between hide and show dropdown content */
+  function toggleDropdownContent() {
+    document.getElementById("MyDropdown").classList.toggle("show");
+  }
+
+  // close dropdown if user clicks off of it
+  window.onclick = function(e) {
+    if (!e.target.matches(".dropbtn")) {
+      var myDropdown = document.getElementById("MyDropdown");
+      if (myDropdown.classList.contains("show")) {
+        myDropdown.classList.remove("show");
+      }
+    }
+  }
+</script>
+
+</html>
